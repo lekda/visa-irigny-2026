@@ -1,0 +1,77 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float} % position images freely
+
+% \usepackage{fontspec} % Custom fonts 
+% \setmainfont{Sarabun-Regular}[Path=./Fonts/Sarabun/, Extension=.ttf]
+
+% Table stuffs
+\usepackage{multirow} 
+\usepackage{array} 
+\usepackage{caption}
+\usepackage{makecell}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% One third / twothird split stuffs 
+\usepackage{geometry} % Required for custom page layout
+\usepackage{xcolor} % Required for custom colors
+
+% QR-code hyperlinks 
+\usepackage{hyperref}
+
+% Define custom colors for the columns
+\definecolor{StrongBlue}{HTML}{4F5D77} 
+\definecolor{OffWhite}{HTML}{FDF6F1} 
+\pagecolor{OffWhite}
+
+% \usepackage{pgfpages}
+% % Configurer la mise en page pour deux pages côte à côte
+% \pgfpagesuselayout{2 on 1}[a4paper,landscape,border shrink=5mm]
+
+
+% Better footers and page numbers
+\usepackage{fancyhdr} 
+\pagestyle{fancy}     
+\fancyhf{}           
+\fancyhead{} 
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt} 
+\fancyfoot[R]{\fcolorbox{StrongBlue}{StrongBlue}{\color{OffWhite}\thepage}} 
+\geometry{
+    left=0cm,
+    right=0cm,
+    top=0cm,
+    bottom=0cm
+}
+
+\title{Visa marin template}
+\begin{document}
+\include{général}
+\include{16-08/day_template}
+\include{17-08/day_template}
+\include{18-08/day_template}
+\include{19-08/day_template}
+\include{20-08/day_template}
+\include{21-08/day_template}
+\include{22-08/day_template}
+\include{23-08/day_template}
+\include{Annexes/A}
+
+\end{document}
+
+% Pour passer en mode "super paysage, avec les pages deux à deux"
+\documentclass{article}
+\usepackage{pdfpages}
+\usepackage[papersize={59.4cm,21cm},margin=0cm]{geometry}
+
+\begin{document}
+
+\includepdf[
+    pages=-,
+    nup=2x1,
+    noautoscale=true,
+    scale=1,
+    frame=false
+]{projet_navigation_we.pdf}
+
+\end{document}
