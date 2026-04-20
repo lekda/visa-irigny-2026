@@ -39,3 +39,7 @@
 
 # glossaries
 *.glstex
+
+## output file 
+build/main.pdf
+*main.synctex.gz
